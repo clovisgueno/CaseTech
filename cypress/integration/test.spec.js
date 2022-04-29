@@ -9,8 +9,8 @@ describe('Test', () => {
         TestHome.clickButtonSuccess();
     });
     it('Deve clicar em todos os botões edit e delete da grid', () => {
-        TestHome.clickEditGrid();
-        TestHome.clickDeleteGrid();
+        TestHome.clickAllEditGrid();
+        TestHome.clickAllDeleteGrid();
     }); 
 
 });

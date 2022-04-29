@@ -14,11 +14,11 @@ class TestHome{
         cy.get(el.buttonSuccess).should('be.visible').click();
     }
 
-    clickEditGrid(){
+    clickAllEditGrid(){
         cy.get(el.buttonEditGrid).click({ multiple: true });
     }
 
-    clickDeleteGrid(){
+    clickAllDeleteGrid(){
         cy.get(el.buttonDeleteGrid).click({ multiple: true });
     }
 

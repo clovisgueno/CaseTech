@@ -19,6 +19,17 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-before(() => {
+
+beforeEach(() => {
     cy.openSite();
+
+    Cypress.Server.defaults({
+        delay: 500,
+        force404: false,
+        whitelist: (xhr) => {
+        return true;
+        }
+    })
 });
+
+
