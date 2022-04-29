@@ -3,5 +3,6 @@ export const ELEMENTS = {
     buttonAlert: '[class="button alert"]',
     buttonSuccess: '[class="button success"]',
     buttonEditGrid: 'tbody tr a:contains(edit)',
-    buttonDeleteGrid:'tbody tr a:contains(delete)' 
+    buttonDeleteGrid:'tbody tr a:contains(delete)',
+    totalRegisters: 10
 }

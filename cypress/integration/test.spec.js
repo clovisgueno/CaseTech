@@ -6,7 +6,7 @@ describe('Test', () => {
     it('Deve efetuar um clique em todos os 3 botões', () => {
         TestHome.clickButton();
         TestHome.clickButtonAlert();
-        TestHome.clickButtonSuccess();
+        TestHome.clickButtonSuccess();        
     });
     it('Deve clicar em todos os botões edit e delete da grid', () => {
         TestHome.clickAllEditGrid();
