@@ -11,56 +11,33 @@ class TestHome{
     clickButtonAlert(){
         cy.get(el.buttonAlert)
         .should('be.visible')
-        .click().
-        should('have.focus');
-    }
-
-    clickButtonSuccess(){
-        cy.get(el.buttonSuccess).
-        should('be.visible').
-        click()
+        .click()
         .should('have.focus');
     }
 
-    clickAllEditGrid(){
-        cy.get(el.buttonEditGrid)
-        .should('have.length', el.totalRegisters)
-        .click({ multiple: true })
-        .url()
-        .should('be.equal', el.urlEditGrid);   
+    clickButtonSuccess(){
+        cy.get(el.buttonSuccess)
+        .should('be.visible')
+        .click()
+        .should('have.focus');
     }
 
-    clickAllDeleteGrid(){
-        cy.get(el.buttonDeleteGrid)
-        .should('have.length', el.totalRegisters)
-        .click({ multiple: true })
-        .url()
-        .should('be.equal', el.urlDeleteGrid);   
+    clickEditAndDelete(){
+        var listLength = el.totalRegisters;
 
-    }
-
-    ClickEditAndDelete(){
-        var children = el.totalRegisters;
-        for (var i = 0; i < children; i++) {
-
+        for (var i = 0; i < listLength; i++) {
             cy.contains('tbody tr', el.idPrefix + i) 
             .contains(el.labelEdit)   
             .click();
-            cy.url().should('be.equal', el.urlEditGrid)
+            cy.url().should('be.equal', el.urlEditGrid);
 
             cy.contains('tbody tr', el.idPrefix + i)  
             .contains(el.labelDelete)   
             .click();
-            cy.url().should('be.equal', el.urlDeleteGrid)
-
+            cy.url().should('be.equal', el.urlDeleteGrid);
         }
-           
 
-        cy.get(el.buttonEditGrid)
-        .log('have.length');
-        
-    }
-    
+    } 
 
 }
 
