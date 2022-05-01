@@ -1,4 +1,4 @@
-const el = require('./elements').ELEMENTS;
+const el = require('./homeElements').ELEMENTS;
 
 class TestHome{
     clickButton(){
