@@ -3,14 +3,16 @@
 import TestHome from '../support/pages/Home';
 
 describe('Test', () => {
-    it('Deve efetuar um clique em todos os 3 botões', () => {
+    it.skip('Click on all 3 buttons', () => {
         TestHome.clickButton();
         TestHome.clickButtonAlert();
         TestHome.clickButtonSuccess();        
     });
-    it('Deve clicar em todos os botões edit e delete da grid', () => {
+    it('Click on all the edit and delete buttons on the grid - By ID', () => {
+        TestHome.ClickEditAndDelete();
+    }); 
+    it.skip('Click on all the edit and delete buttons on the grid - Multiple clicks', () => {
         TestHome.clickAllEditGrid();
         TestHome.clickAllDeleteGrid();
     }); 
-
 });

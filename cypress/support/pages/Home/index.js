@@ -23,18 +23,44 @@ class TestHome{
     }
 
     clickAllEditGrid(){
-        cy.get(el.buttonDeleteGrid)
-        .should('have.length', el.totalRegisters)
-        .click({ multiple: true })
-        .should('have.focus');   
-    }
-
-    clickAllDeleteGrid(){
         cy.get(el.buttonEditGrid)
         .should('have.length', el.totalRegisters)
         .click({ multiple: true })
-        .should('have.focus');   
+        .url()
+        .should('be.equal', el.urlEditGrid);   
     }
+
+    clickAllDeleteGrid(){
+        cy.get(el.buttonDeleteGrid)
+        .should('have.length', el.totalRegisters)
+        .click({ multiple: true })
+        .url()
+        .should('be.equal', el.urlDeleteGrid);   
+
+    }
+
+    ClickEditAndDelete(){
+        var children = el.totalRegisters;
+        for (var i = 0; i < children; i++) {
+
+            cy.contains('tbody tr', el.idPrefix + i) 
+            .contains(el.labelEdit)   
+            .click();
+            cy.url().should('be.equal', el.urlEditGrid)
+
+            cy.contains('tbody tr', el.idPrefix + i)  
+            .contains(el.labelDelete)   
+            .click();
+            cy.url().should('be.equal', el.urlDeleteGrid)
+
+        }
+           
+
+        cy.get(el.buttonEditGrid)
+        .log('have.length');
+        
+    }
+    
 
 }
 
