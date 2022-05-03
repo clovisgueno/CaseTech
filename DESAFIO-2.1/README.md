@@ -2,7 +2,9 @@
 
 ## Instalar Node.js, NPM e Cypress
 
- * Executar os seguintes comandos no cmd como administrador
+ * Baixar a pasta CaseTech
+
+ * Executar os seguintes comandos no cmd como administrador (dentro da pasta Casetech)
  ```
  npm install
  npm i cypress@8.2.0 –D
