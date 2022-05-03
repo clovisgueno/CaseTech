@@ -11,4 +11,6 @@
   
 5.  Clicar em Collections > CaseTech2 > Run > Run CaseTech2
 
+Escopo Case QA-1 - http://jsonplaceholder.typicode.com/users
+
 <img src="https://github.com/clovisgueno/CaseTech/blob/master/DESAFIO-2.2/Result-Test2-2.PNG?raw=true"/>
